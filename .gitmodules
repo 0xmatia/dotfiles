@@ -1,0 +1,3 @@
+[submodule "/home/syberman/.config/nvim"]
+	path = /home/syberman/.config/nvim
+	url = git@github.com:0xmatia/nvim.git

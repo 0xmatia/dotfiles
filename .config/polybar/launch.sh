@@ -17,7 +17,7 @@ if type "xrandr" > /dev/null; then
 	if [ $m = "HDMI-0" ]; then
 	    MONITOR=$m polybar --reload top -c ~/.config/polybar/config.ini &
 	    MONITOR=$m polybar --reload bottom -c ~/.config/polybar/config.ini &
-	elif [ $m = "DVI-D-1" ]; then
+	elif [ $m = "DVI-D-0" ]; then
 		sleep 0.5
 	    MONITOR=$m polybar --reload top -c ~/.config/polybar/config.ini &
 	    MONITOR=$m polybar --reload bottom -c ~/.config/polybar/config.ini &

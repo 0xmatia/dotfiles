@@ -51,10 +51,10 @@ set $right l
 # use xrandr and/or arandr to know the names of your monitors
 # use this line to tell which monitor is on the right
 # xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
-exec --no-startup-id xrandr --output DVI-D-1 --right-of HDMI-0 --auto
+exec --no-startup-id xrandr --output DVI-D-0 --right-of HDMI-0 --auto
 
 set $firstMonitor HDMI-0 
-set $secondMonitor DVI-D-1 
+set $secondMonitor DVI-D-0 
 
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
@@ -240,13 +240,19 @@ bindsym $mod+Mod1+Ctrl+Up resize grow height 1 px or 1 ppt
 bindsym $mod+Mod1+Ctrl+Down resize shrink height 1 px or 1 ppt
 bindsym $mod+Mod1+Ctrl+Left resize grow width 1 px or 1 ppt
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 ##################################
 #         Window titles          #
 ##################################
 
 # choose your font
-font pango:Jetbrains Mono Nerd Font Regular 9
-title_align center
+font pango:monospace 8
+title_align left
 
 ################################################
 #       assign applications to workspaces      #
@@ -449,10 +455,10 @@ popup_during_fullscreen smart
 ################
 
 default_floating_border pixel 2
-gaps inner 5
-gaps outer 5
-#smart_gaps on
-#smart_borders on
+gaps inner 3
+gaps outer 3
+smart_gaps on
+smart_borders on
 
 
 ##########################
