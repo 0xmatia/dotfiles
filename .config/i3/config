@@ -97,10 +97,9 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 ################################
 
 # Launches.
-bindsym $mod+d exec ~/.config/rofi/launcher/run.sh
-
+bindsym $mod+d exec rofi -show drun
 # Show windows.
-bindsym $mod+Tab exec ~/.config/rofi/switcher/run.sh
+bindsym $mod+Tab exec rofi -show window
 
 #####################################################################################################################
 #################                          how to exit, logoff, suspend, ...                        #################
@@ -436,7 +435,7 @@ hide_edge_borders both
 bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 
 #changing border style
-default_border pixel 0
+default_border pixel 2
 bindsym $mod+i border normal
 bindsym $mod+y border pixel 2
 bindsym $mod+u border none
@@ -484,7 +483,7 @@ set $orange         #f28534
 
 # define colors for windows:
 #class		        	  border		bground			text		  indicator	   child_border
-client.focused          $yellowish	   $yellowish	  $dark-gray	  $black 	   $black
-client.unfocused        $dark-gray	   $dark-gray	  $text-color	  $dark-gray   $black
-client.focused_inactive $light-gray	   $yellowish	  $dark-gray	  $dark-gray   $black
-client.urgent		   	$red		   $red		      $text-color	  $red         $black
+# client.focused          $yellowish	   $yellowish	  $dark-gray	  $black 	   $black
+# client.unfocused        $dark-gray	   $dark-gray	  $text-color	  $dark-gray   $black
+# client.focused_inactive $light-gray	   $yellowish	  $dark-gray	  $dark-gray   $black
+# client.urgent		   	$red		   $red		      $text-col
